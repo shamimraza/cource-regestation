@@ -1,30 +1,27 @@
 import { BsCurrencyDollar } from "react-icons/bs";
 import { BiBookOpen } from "react-icons/bi";
 
-const Cards = ({ data }) => {
-    const { img, name, price, details, credit } = data
-    console.log(data);
+const Cards = ({ data, handleSelectButton }) => {
+    const { img, name, price, details, credit } = data;
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src={img} alt="image" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">{name}</h2>
+            <div className="card  bg-base-100 shadow-xl">
+                <figure><img className="w-full p-4 " src={img} alt="image" /></figure>
+                <div className="card-body h-[320px]">
+                    <h3 className="card-title">{name}</h3>
                     <p>{details}</p>
                     <div className="flex justify-between">
                         <div className="flex justify-center items-center gap-3">
                             <BsCurrencyDollar></BsCurrencyDollar>
-                            <span>  Price: {price}</span>
+                            <span>  Price : {price}</span>
                         </div>
                         <div className="flex justify-center items-center gap-3">
                             <BiBookOpen></BiBookOpen>
-                            <span>  Credit :{credit}hr</span>
+                            <span>  Credit : {credit}hr</span>
                         </div>
                     </div>
-
-
                     <div className="card-actions justify-center">
-                        <button className="btn btn-primary w-full">Select</button>
+                        <button onClick={() => handleSelectButton(data)} className="btn btn-primary w-full">Select</button>
                     </div>
                 </div>
             </div>

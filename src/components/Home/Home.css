@@ -2,5 +2,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    width: 1240px;
 
+}
+
+.cart-container {
+    width: 400px;
+    overflow: hidden;
+    margin-left: 30px;
 }
