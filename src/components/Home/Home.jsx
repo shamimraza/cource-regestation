@@ -27,14 +27,25 @@ const Home = () => {
         let count = data.credit;
         let count1 = data.price;
         if (isExit) {
-            return Swal.fire('already Selected item')
+            return Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Already Selected Items',
+                showConfirmButton: false,
+                timer: 1500
+            })
         } else {
             allSelected.forEach(item => {
                 count = count + item.credit;
             })
 
             if (count > 20) {
-                return Swal.fire('remainig balance enpty')
+                return Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    footer: '<a href="">No Credit Hours Left</a>'
+                })
             } else {
                 const remaining = 20 - count;
                 setAllTotalCost(count)

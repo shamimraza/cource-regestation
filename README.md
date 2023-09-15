@@ -1,11 +1,10 @@
-# React + Vite
-# read me
-# i am shamim raza
+::At least three project features have been added ::
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- There is a round the clock support system for students
+- Support is given in the Facebook group and the problem is solved within 24 hours maximum
+- And certificate is awarded at the end of the course
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-- raza babu sei lok
+:: The assignment project discussed how can i  state was managed ::
+
+     Understand the different states system or application can be in.Takes appropriate actions to update the state based on events and current conditions.
