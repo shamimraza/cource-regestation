@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const Cart = ({ allSelected, allTotalCost, remaining }) => {
+const Cart = ({ allSelected, allTotalCost, remaining, totalcosting }) => {
     console.log(allSelected);
     return (
         <div className=''>
@@ -13,7 +13,7 @@ const Cart = ({ allSelected, allTotalCost, remaining }) => {
             <div>
                 {
                     allSelected.map((select, idx) => (
-                        <div className='mt-3 ml-8'>
+                        <div className='mt-3 ml-8 text-[#1C1B1B99]'>
                             {idx + 1} {select.name}
                         </div>
 
@@ -23,7 +23,9 @@ const Cart = ({ allSelected, allTotalCost, remaining }) => {
 
             </div>
             <hr className='w-[80%] mx-auto my-4' />
-            <h2 className='font-medium ml-8'>Total Credit Hour : {allTotalCost}</h2>
+            <h2 className='font-medium ml-8 text-[#1C1B1BCC]'>Total Credit Hour : {allTotalCost}</h2>
+            <hr className='my-6' />
+            <h1 className='ml-8 font-semibold '>Total Price : {totalcosting} USD</h1>
         </div>
     );
 };

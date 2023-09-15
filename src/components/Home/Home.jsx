@@ -13,6 +13,7 @@ const Home = () => {
 
     const [allTotalCost, setAllTotalCost] = useState();
     const [remaining, setRemaining] = useState(20);
+    const [totalcosting, setTotalCosting] = useState()
 
 
     useEffect(() => {
@@ -24,21 +25,32 @@ const Home = () => {
     const handleSelectButton = data => {
         const isExit = allSelected.find(item => item.id == data.id);
         let count = data.credit;
+        let count1 = data.price;
         if (isExit) {
             return Swal.fire('already Selected item')
         } else {
             allSelected.forEach(item => {
                 count = count + item.credit;
-
             })
 
-            const remaining = 20 - count;
-            setAllTotalCost(count)
-            setRemaining(remaining)
+            if (count > 20) {
+                return Swal.fire('remainig balance enpty')
+            } else {
+                const remaining = 20 - count;
+                setAllTotalCost(count)
+                setRemaining(remaining)
 
 
-            const newSelected = ([...allSelected, data])
-            setAllSelected(newSelected)
+                const newSelected = ([...allSelected, data])
+                setAllSelected(newSelected)
+            }
+
+            allSelected.forEach(item1 => {
+                count1 = count1 + item1.price;
+            })
+            setTotalCosting(count1)
+
+
         }
 
     }
@@ -55,7 +67,7 @@ const Home = () => {
                 }
             </div>
             <div className="cart-container bg-base-100 shadow-xl">
-                <Cart allSelected={allSelected} allTotalCost={allTotalCost} remaining={remaining}></Cart>
+                <Cart allSelected={allSelected} allTotalCost={allTotalCost} remaining={remaining} totalcosting={totalcosting}></Cart>
             </div>
         </div>
     );
