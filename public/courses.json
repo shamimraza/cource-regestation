@@ -17,8 +17,8 @@
     },
     {
       "id": 3,
-      "name": "https://i.ibb.co/3C64tY0/Rectangle-2-4.png",
-      "img": "image3.jpg",
+      "name": "Introduction to C++ for DSA",
+      "img": "https://i.ibb.co/b7pbL9j/Rectangle-2-4.png",
       "price": 10000,
       "credit": 10,
       "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
