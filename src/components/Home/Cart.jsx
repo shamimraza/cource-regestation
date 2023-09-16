@@ -3,7 +3,6 @@
 import React from 'react';
 
 const Cart = ({ allSelected, allTotalCost, remaining, totalcosting }) => {
-    console.log(allSelected);
     return (
         <div className='cart'>
             <h2 className='text-center font-bold text-[#2F80ED]'>Credit Hour Remaining {remaining} hr</h2>
