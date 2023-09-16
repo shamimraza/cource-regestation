@@ -1,11 +1,13 @@
 import { BsCurrencyDollar } from "react-icons/bs";
 import { BiBookOpen } from "react-icons/bi";
 
+// eslint-disable-next-line react/prop-types
 const Cards = ({ data, handleSelectButton }) => {
+    // eslint-disable-next-line react/prop-types
     const { img, name, price, details, credit } = data;
     return (
         <div>
-            <div className="card  bg-base-100 shadow-xl">
+            <div className="card  bg-base-100 shadow-xl ">
                 <figure><img className="w-full p-4 " src={img} alt="image" /></figure>
                 <div className="card-body h-[320px]">
                     <h3 className="card-title">{name}</h3>

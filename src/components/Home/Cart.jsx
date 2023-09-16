@@ -5,7 +5,7 @@ import React from 'react';
 const Cart = ({ allSelected, allTotalCost, remaining, totalcosting }) => {
     console.log(allSelected);
     return (
-        <div className=''>
+        <div className='cart'>
             <h2 className='text-center font-bold text-[#2F80ED]'>Credit Hour Remaining {remaining} hr</h2>
             <hr className='w-[80%] mx-auto my-4 ' />
             <h3 className='ml-8 font-bold'>Course Name</h3>
